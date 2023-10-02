@@ -1,0 +1,12 @@
+{
+  "version": 1,
+  "isRoot": true,
+  "tools": {
+    "flashoware.tool": {
+      "version": "1.0.0-prerelease0",
+      "commands": [
+        "flashoware"
+      ]
+    }
+  }
+}

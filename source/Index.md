@@ -84,8 +84,7 @@ https://learn.microsoft.com/dotnet/csharp/roslyn-sdk/compiler-api-model
       - Document
       - Document
         - Text
-        - Syntax
-        - Symbols
+        - Syntax Tree
 
 #### Syntax Tree
 - Document
@@ -101,9 +100,8 @@ https://learn.microsoft.com/dotnet/csharp/roslyn-sdk/compiler-api-model
 
 #### Semantic Model
 - Compilation
-  - Symbols
-- Document
-  - Semantic Model
+  - SemanticModel (Document)
+    - Symbols
 
 #### Example
 ```CSharp
@@ -138,6 +136,13 @@ internal static class Program
         return "Release";
 #endif
     }
+
+    public static string ReadOnlyProperty
+    {
+        get { return "Text"; }
+    }
+
+    public static string ExpressionBodiedProperty => "Text";
 }
 ```
 
@@ -264,6 +269,12 @@ https://github.com/FlashOWare/FlashOWare.Tool
 https://github.com/dotnet/roslyn/blob/main/docs/wiki/NuGet-packages.md
 
 https://learn.microsoft.com/dotnet/core/tools/global-json
+
+|               |           |           |           |           |
+| ------------- | --------- | --------- | --------- | --------- |
+| .NET SDK      | `6.0.100` | `7.0.100` | `7.0.400` | `8.0.100` |
+| Roslyn        | `4.0.1`   | `4.4.0`   | `4.7.0`   | `4.8.0`   |
+| Visual Studio | `17.0.0`  | `17.4.0`  | `17.7.0`  | `17.8.0`  |
 
 ###### [TOC](#table-of-contents)
 
